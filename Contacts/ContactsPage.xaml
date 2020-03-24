@@ -3,4 +3,13 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="New" Clicked="NewContactToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="ContactsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Email}" TextColor="Teal"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
